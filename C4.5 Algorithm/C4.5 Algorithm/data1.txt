@@ -1,0 +1,15 @@
+QuangCanh,NhietDo,DoAm,Gio,QuyetDinh
+Nang,Nong,85,Yeu,Khong
+Nang,Nong,90,Manh,Khong
+AmU,Nong,78,Yeu,Co
+Mua,Am,96,Yeu,Co
+Mua,Lanh,80,Yeu,Co
+Mua,Lanh,70,Manh,Khong
+AmU,Lanh,65,Manh,Co
+Nang,Am,95,Yeu,Khong
+Nang,Lanh,70,Yeu,Co
+Mua,Am,80,Yeu,Co
+Nang,Am,70,Manh,Co
+AmU,Am,90,Manh,Co
+AmU,Nong,75,Yeu,Co
+Mua,Am,80,Manh,Khong

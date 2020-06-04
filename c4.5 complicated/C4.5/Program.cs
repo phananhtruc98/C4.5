@@ -27,6 +27,7 @@ namespace C4._5
             //Console.WriteLine(rs);
             int rs = MakeDecision(temp, Entropy_of_Dataset).Key;
             Console.WriteLine("Root node: " + nodes.Split(',')[rs]);
+            GetSecondNode(temp, rs);
             Console.ReadLine();
         }
 
@@ -106,7 +107,6 @@ namespace C4._5
             IntDouble rs = gain_ratio_each_value.Where(x => x.Value == value_max).FirstOrDefault();
             return rs;
         }
-
 
         private static double GetGain(double entropy_main, List<IntString> dataset, int main_value)
         {
@@ -243,15 +243,27 @@ namespace C4._5
             return listGainRatio.Where(x=>x.Value == max_gain_ratio).FirstOrDefault();
         }
 
-
-        public static void Test()
+        private static void GetSecondNode(string[] S, int RootNodeIndex)
         {
-
+            List<string> values = GetValuesInProperty(S, RootNodeIndex);
+            for(int i = 0; i <= values.Count - 1; i++)
+            {
+                Console.WriteLine(values[i]);
+            }
         }
 
 
 
 
+        private static List<string> GetValuesInProperty(string[] S, int index)
+        {
+            List<string> values = new List<string>();
+            for (int i = 0; i <= S.Length - 1; i++)
+            {
+                values.Add(S[i].Split(',')[index]);
+            }
+            return values.Distinct().ToList();
+        }
 
 
         static Dictionary<string, int> Entropy(string[] S, int collum_index = 1000)
